@@ -1,9 +1,9 @@
 // compra.mjs
 import { DataTypes } from 'sequelize';
 import Sequelize from '../config/';
-import Cliente from './cliente.js';
+import Cliente from './Cliente.js';
 
-const Compra = Sequelize.define('Compra', {
+const Compra = Sequelize.define('compras', {
   codigo: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -20,7 +20,8 @@ const Compra = Sequelize.define('Compra', {
   },
   data: {
     type: DataTypes.DATE,
-    allowNull: false
+    allowNull: false,
+    defaultValue: DataTypes.NOW,
   },
   id_cliente: {
     type: DataTypes.INTEGER,
@@ -29,7 +30,13 @@ const Compra = Sequelize.define('Compra', {
       model: Cliente,
       key: 'id'
     }
+  },
+},
+  {
+    freezeTableName: true,
+    timestamps: false
   }
-});
+
+);
 
 export default Compra;

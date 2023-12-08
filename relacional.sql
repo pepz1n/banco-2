@@ -15,3 +15,19 @@ create table compras (
   data date not null,
   id_cliente integer not null references clientes(id)
 );
+
+
+INSERT INTO clientes (cpf, nome, endereco, cidade, uf, email) VALUES
+    ('12345678901', 'João Silva', 'Rua A, 123', 'XAXIM', 'SC', 'joao.silva@email.com');
+
+INSERT INTO clientes (cpf, nome, endereco, cidade, uf, email) VALUES
+    ('98765432109', 'Maria Oliveira', 'Avenida B, 456', 'Chapeco', 'PR', 'maria.oliveira@email.com');
+
+INSERT INTO clientes (cpf, nome, endereco, cidade, uf, email) VALUES
+    ('45678901234', 'Carlos Santos', 'Rua C, 789', 'Sao paulo', 'SP', 'carlos.santos@email.com');
+
+INSERT INTO clientes (cpf, nome, endereco, cidade, uf, email) VALUES
+    ('78901234567', 'Ana Pereira', 'Avenida D, 987', 'Concórdia', 'SC', 'ana.pereira@email.com');
+
+INSERT INTO clientes (cpf, nome, endereco, cidade, uf, email) VALUES
+    ('23456789012', 'Pedro Souza', 'Rua E, 654', 'Xaxim', 'SC', 'pedro.souza@email.com');

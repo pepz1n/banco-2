@@ -2,7 +2,7 @@
 import { DataTypes } from 'sequelize';
 import Sequelize from '../config/';
 
-const Cliente = Sequelize.define('Cliente', {
+const Cliente = Sequelize.define('clientes', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -32,6 +32,11 @@ const Cliente = Sequelize.define('Cliente', {
     allowNull: false,
     unique: true
   }
-});
+},
+{
+  freezeTableName: true,
+  timestamps: false
+}
+);
 
 export default Cliente;
