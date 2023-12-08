@@ -1,6 +1,7 @@
 import Compra from "../models/Compras";
 import Pessoa from '../models/ClentesMongo'
 import Cliente from "../models/Cliente";
+// import { createClient } from 'redis';
 
 const compra = async (req, res) => {
   try {
@@ -22,12 +23,26 @@ const compra = async (req, res) => {
 
     const objetoDoRedis = {
       nomeAmigoCliente: req.body.amigo.nome,
-      nomeAmigoCliente: pessoaComprador.nome,
+      nomeCliente: pessoaComprador.nome,
       compraCliente: req.body.compra.produto,
       valorCompraCliente: req.body.compra.valor
     }
+    // const client = createClient();
+    // client.on('error', err => console.log('Redis Client Error', err));
+
+    // await client.connect({
+    //   password: '06112004bE@',
+    //     socket: {
+    //         host: 'redis-12520.c308.sa-east-1-1.ec2.redns.redis-cloud.com',
+    //         port: 12520
+    //     }
+    // });
+
+    // await client.hSet('dados', objetoDoRedis)
+    // let userSession = await client.hGetAll('dados');
+
     return res.status(200).send({
-      message: 'objetoDoRedis'
+      dados: objetoDoRedis
     })
   } catch (error) {
     return res.status(200).send({
