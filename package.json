@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +13,11 @@
     "dotenv": "16.3.1",
     "esm": "3.2.25",
     "express": "4.18.2",
+    "mongoose": "6.2.6",
     "pg": "8.11.3",
     "sequelize": "6.35.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }

@@ -1,6 +1,10 @@
 import Express  from "express";
 import 'dotenv/config';
 import Routes from "./routes";
+import mongo from "./config/mongo.js";
+
+mongo.on("error", console.log.bind(console, 'Erro de Conexao'));
+mongo.once("open", () => console.log("Conectou com o banco"));
 
 const app = Express();
 
