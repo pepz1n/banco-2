@@ -31,7 +31,7 @@ const compra = async (req, res) => {
     // client.on('error', err => console.log('Redis Client Error', err));
 
     // await client.connect({
-    //   password: '06112004bE@',
+    //   password: 'Não esta funcionando',
     //     socket: {
     //         host: 'redis-12520.c308.sa-east-1-1.ec2.redns.redis-cloud.com',
     //         port: 12520
